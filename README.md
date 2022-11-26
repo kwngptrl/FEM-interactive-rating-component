@@ -38,7 +38,7 @@ Users should be able to:
 
 ## My process
 
-This is my first challenge to work with HTML, CSS and JS in combination. It was a bit confusing at first. Looking at the design images, there is definitely a radiobutton group. But what to do with... Is this a multi-page site? Nothing in the description says so. If it's only all on one page then it must utilize 'display:none' in CSS. But will that impact accessibilty? Querying Google says it's not necessarily so.
+This is my first challenge to work with HTML, CSS and JS in combination. It was a bit confusing at first. Looking at the design images, there is definitely a radiobutton group. But what to do with... Is this a multi-page site? Nothing in the description says so. If it's only all on one page then it must utilize 'display:none' in CSS. But will that impact accessibility? Querying Google says it's not necessarily so.
 
 Okay. Now, I have to figure out how to style the radiobuttons. Lots of hints on YouTube. Found one and proceeded to dissect it and understand it. Again, CSS is not as intuitive as it's supposed to be. Then, the JS, found some stuff, but not working as expected. I managed to get it to work however. Later, I found my code to be very similar to the example in MDN.
 
@@ -54,7 +54,7 @@ Okay. Now, I have to figure out how to style the radiobuttons. Lots of hints on 
 
 ### What I learned
 
-I had to add an additional color to those provided, as those provided were not enough to faithfully render the project when compared with the provided scheenshots.
+I had to add an additional color to those provided, as those provided were not enough to faithfully render the project when compared with the provided screenshots.
 
 The assigned font 'Overpass' was not centering itself when in responsive mode. The problem was noted by someone here: [Text moves on devices in responsive design](https://www.sitepoint.com/community/t/text-moves-on-devices-in-responsive-design/306160). It is unrelated to this Frontendmentor challenge.
 
