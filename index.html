@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="card">
+      <!-- Rating state start -->
+      <section class="question">
+        <img src="./images/icon-star.svg" alt="star icon">
+        <h1>How did we do?</h1>
+        <form id="ratingForm" class="question">
+          <fieldset>
+            <legend>Please let us know how we did with your support request. All feedback is appreciated
+              to help us improve our offering!</legend>
+            <div class="radio-btn-group">
+              <div class="radio-container">
+                <input type="radio" name="rating" value="1" id="choice1" required>
+                <label for="choice1">1</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="rating" value="2" id="choice2">
+                <label for="choice2">2</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="rating" value="3" id="choice3">
+                <label for="choice3">3</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="rating" value="4" id="choice4">
+                <label for="choice4">4</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="rating" value="5" id="choice5">
+                <label for="choice5">5</label>
+              </div>
+            </div>
+            <button id="btn" type="submit">SUBMIT</button>
+          </fieldset>
+        </form>
+      </section>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <section class="thanks-card">
+        <img class="thanks-card" src="./images/illustration-thank-you.svg" alt="illustration thank you">
+        <p class="ratingPicked">You selected <span id="output"></span> out of 5</p>
+        <h2 class="big">Thank you!</h2>
+        <p class="gratitude">We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!</p>
+      </section>
+      <!-- Thank you state end -->
+    </div> <!-- closes .card -->
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/kwngptrl">Wannacode</a>.
+    </div>
+  </main>
+
+  <script>
+    const btn = document.querySelector("#btn");
+    const radioButtons = document.querySelectorAll('input[name="rating"]');
+    const question = document.getElementsByClassName("question");
+    const thanks = document.getElementsByClassName("thanks-card");
+
+    btn.addEventListener("click", (e) => {
+      let selectedRating;
+      for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+          selectedRating = radioButton.value;
+          output.innerText = selectedRating;
+          question[0].style.display = 'none';
+          thanks[0].style.display = 'flex';
+          document.getElementById('ratingForm').reset();
+          e.preventDefault();
+          break;
+        }
+      }
+    })    
+  </script>
+
+</body>
+
+</html>
